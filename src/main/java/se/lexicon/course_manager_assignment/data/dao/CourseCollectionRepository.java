@@ -25,7 +25,7 @@ public class CourseCollectionRepository implements CourseDao{
     public Course createCourse(String courseName, LocalDate startDate, int weekDuration) {
         if (courses == null) throw new IllegalArgumentException("There is no courses");
 
-        Course course = new Course("Java",LocalDate.parse("2021-11-25"),5,null);
+        Course course = new Course(courseName,startDate,weekDuration,null);
 
         if (!courses.add(course)) return null;
 

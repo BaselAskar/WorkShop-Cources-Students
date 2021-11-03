@@ -18,7 +18,11 @@ public class StudentCollectionRepository implements StudentDao {
 
     @Override
     public Student createStudent(String name, String email, String address) {
-        return null;
+        Student student = new Student(name,email,address);
+
+        if (!students.add(student)) return null;
+
+        return student;
     }
 
     @Override

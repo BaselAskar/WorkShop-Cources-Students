@@ -1,5 +1,7 @@
 package se.lexicon.course_manager_assignment.model;
 
+import se.lexicon.course_manager_assignment.data.sequencers.StudentSequencer;
+
 import java.util.Objects;
 
 public class Student {
@@ -9,8 +11,8 @@ public class Student {
     private String address;
 
 
-    public Student(int id, String name, String email, String address) {
-        this.id = id;
+    public Student( String name, String email, String address) {
+        this.id = StudentSequencer.nextStudentId();
         this.name = name;
         this.email = email;
         this.address = address;
