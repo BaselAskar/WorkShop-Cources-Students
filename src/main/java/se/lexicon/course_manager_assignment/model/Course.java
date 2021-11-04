@@ -50,6 +50,15 @@ public class Course {
         this.students = students;
     }
 
+
+    public int getWeekDuration() {
+        return weekDuration;
+    }
+
+    public void setWeekDuration(int weekDuration) {
+        this.weekDuration = weekDuration;
+    }
+
     public boolean rollStudent(Student student){
         if (student == null) throw new IllegalArgumentException("Student is null");
 
